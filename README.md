@@ -11,3 +11,7 @@ Carousel for Mobify.
 * Carousel is responsive
 * Carousel is touch friendly (based on click events)
 * Carousel has transitions, and everything is evenly spaced
+
+## Demo
+
+http://callmenick.com/_development/mobify-carousel/
