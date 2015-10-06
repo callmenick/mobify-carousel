@@ -1,0 +1,10 @@
+{
+  "name": "gauntlet-carousel",
+  "version": "0.1.0",
+  "description": "A carousel for navigating images",
+  "devDependencies": {
+    "grunt": "~0.4.x",
+    "grunt-contrib-connect": "~0.6.0"
+  },
+  "license": "MIT"
+}

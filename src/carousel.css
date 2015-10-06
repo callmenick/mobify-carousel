@@ -1,0 +1,252 @@
+/* -----------------------------------------------------------------------------
+
+  BOX SIZING
+  
+----------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+
+  ROOT
+  
+----------------------------------------------------------------------------- */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: #555;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/* -----------------------------------------------------------------------------
+
+  HEADINGS
+  
+----------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+/* -----------------------------------------------------------------------------
+
+  CONTAINER
+  
+----------------------------------------------------------------------------- */
+
+.container {
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+/* -----------------------------------------------------------------------------
+
+  HEADER
+  
+----------------------------------------------------------------------------- */
+
+.header {
+  background-color: #333;
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* -----------------------------------------------------------------------------
+
+  CAROUSEL
+  
+----------------------------------------------------------------------------- */
+
+/**
+ * carousel main container
+ */
+
+.carousel {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/**
+ * carousel images
+ */
+
+.carousel-images {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+  box-shadow: 0 0 12px #ddd;
+}
+
+@media all and (min-width: 480px) {
+  .carousel-images {
+    height: 240px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .carousel-images {
+    height: 450px;
+  }
+}
+
+.carousel-images__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 0;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.carousel-images__image.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/**
+ * carousel navigation
+ */
+
+.carousel-navigation {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.carousel-navigation__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
+  padding: 0;
+}
+
+.carousel-navigation__btn {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  font-size: 0;
+  text-indent: -9999px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-navigation__btn:hover,
+.carousel-navigation__btn.is-active {
+  background-color: #999;
+}
+
+/**
+ * carousel arrows
+ */
+
+.carousel-arrows {
+  display: block;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.carousel-arrows__arrow {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 36px;
+  height: 72px;
+}
+
+.carousel-arrows__arrow--prev {
+  left: 0;
+}
+
+.carousel-arrows__arrow--next {
+  right: 0;
+}
+
+.carousel-arrows__btn {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 36px;
+  height: 72px;
+  background-color: #000;
+  font-size: 0;
+  text-indent: -9999px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.carousel-arrows__btn:hover {
+  opacity: 0.8;
+}
+
+.carousel-arrows__btn:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 12px;
+  height: 24px;
+  content: "";
+}
+
+.carousel-arrows__arrow--prev .carousel-arrows__btn:before {
+  border-right: solid 12px #fff;
+  border-top: solid 12px transparent;
+  border-bottom: solid 12px transparent; 
+}
+
+.carousel-arrows__arrow--next .carousel-arrows__btn:before {
+  border-left: solid 12px #fff;
+  border-top: solid 12px transparent;
+  border-bottom: solid 12px transparent; 
+}
